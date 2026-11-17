@@ -420,6 +420,7 @@ footer kbd{font-family:"JetBrains Mono",monospace;font-size:.78rem;border:1px so
 
       <div class="filters reveal" role="group" aria-label="Filter projects">
         <button class="chip" aria-pressed="true" data-f="all">All</button>
+        <button class="chip" aria-pressed="false" data-f="fintech">Fintech</button>
         <button class="chip" aria-pressed="false" data-f="product">Own product</button>
         <button class="chip" aria-pressed="false" data-f="platform">Platforms</button>
         <button class="chip" aria-pressed="false" data-f="commerce">Commerce</button>
@@ -427,6 +428,13 @@ footer kbd{font-family:"JetBrains Mono",monospace;font-size:.78rem;border:1px so
       </div>
 
       <div class="grid" id="projGrid">
+        <article class="card proj reveal" data-cat="fintech platform mobile">
+          <span class="type">Fintech · Payment gateway · SaaS</span>
+          <h3>5Pay: bKash &amp; Nagad Gateway</h3>
+          <p>Turns a merchant's own bKash or Nagad number into an automated payment gateway. An <strong>Android app</strong> reads the payment SMS and matches a 6-digit reference, so orders are confirmed within seconds without anyone copying transaction IDs. It also has a merchant portal, a <strong>WooCommerce plugin</strong>, a REST API with <strong>HMAC-signed webhooks</strong>, and subscription billing with no per-transaction fees.</p>
+          <div class="tags"><span class="tag hi">Payments</span><span class="tag">Android</span><span class="tag">REST API</span><span class="tag">Webhooks</span><span class="tag">WooCommerce</span></div>
+          <div class="links"><a href="https://pay-beta.fivedit.com/" target="_blank" rel="noopener">pay-beta.fivedit.com ↗</a></div>
+        </article>
         <article class="card proj reveal" data-cat="product platform">
           <span class="type">Own product · Logistics</span>
           <h3>Cargo Directory World</h3>
