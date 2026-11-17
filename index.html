@@ -421,6 +421,7 @@ footer kbd{font-family:"JetBrains Mono",monospace;font-size:.78rem;border:1px so
       <div class="filters reveal" role="group" aria-label="Filter projects">
         <button class="chip" aria-pressed="true" data-f="all">All</button>
         <button class="chip" aria-pressed="false" data-f="fintech">Fintech</button>
+        <button class="chip" aria-pressed="false" data-f="ai">AI</button>
         <button class="chip" aria-pressed="false" data-f="product">Own product</button>
         <button class="chip" aria-pressed="false" data-f="platform">Platforms</button>
         <button class="chip" aria-pressed="false" data-f="commerce">Commerce</button>
@@ -428,6 +429,12 @@ footer kbd{font-family:"JetBrains Mono",monospace;font-size:.78rem;border:1px so
       </div>
 
       <div class="grid" id="projGrid">
+        <article class="card proj reveal" data-cat="ai mobile product">
+          <span class="type">AI · HealthTech · In development</span>
+          <h3>AI Doctor: Prescription &amp; Lab Report Analyzer</h3>
+          <p>A mobile app that reads <strong>multi-page prescriptions</strong> with Gemini vision. It extracts each medicine's dosage, frequency and duration, flags risk levels and <strong>drug interactions</strong>, and reports a confidence score for each reading. It also analyzes <strong>lab reports</strong>, marking values high, low or normal, highlighting critical findings and explaining them in plain language. Available in <strong>7 languages</strong>, including Bangla, Hindi and Arabic.</p>
+          <div class="tags"><span class="tag hi">Gemini API</span><span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">Structured LLM output</span><span class="tag">Vision AI</span></div>
+        </article>
         <article class="card proj reveal" data-cat="fintech platform mobile">
           <span class="type">Fintech · Payment gateway · SaaS</span>
           <h3>5Pay: bKash &amp; Nagad Gateway</h3>
