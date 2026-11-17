@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Al Amin Hossain — Senior Software Engineer</title>
+<meta name="description" content="Al Amin Hossain — Senior Full-Stack Software Engineer (Node.js, NestJS, Laravel, Next.js, AWS). Building AI-based CRM, fintech and scalable microservice systems.">
+<meta property="og:title" content="Al Amin Hossain — Senior Software Engineer">
+<meta property="og:description" content="Full-stack engineer building AI-based CRM, fintech and scalable microservice systems on AWS.">
+<meta property="og:image" content="assets/profile.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563eb'/><text x='50%' y='54%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='28' fill='white'>AH</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fa; --surface:#ffffff; --surface-2:#f0f2f6; --text:#0f172a; --muted:#5b6476;
+  --border:#e3e7ee; --accent:#2563eb; --accent-2:#7c3aed; --accent-soft:rgba(37,99,235,.09);
+  --shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0f17; --surface:#121826; --surface-2:#182033; --text:#e6e9ef; --muted:#97a1b3;
+    --border:#232c3f; --accent:#60a5fa; --accent-2:#a78bfa; --accent-soft:rgba(96,165,250,.12);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0f17; --surface:#121826; --surface-2:#182033; --text:#e6e9ef; --muted:#97a1b3;
+  --border:#232c3f; --accent:#60a5fa; --accent-2:#a78bfa; --accent-soft:rgba(96,165,250,.12);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.brand{font-weight:800;color:var(--text);letter-spacing:-.02em}
+.brand span{color:var(--accent)}
+.nav ul{display:flex;gap:22px;list-style:none;font-size:.92rem}
+.nav ul a{color:var(--muted);font-weight:500}
+.nav ul a:hover{color:var(--text);text-decoration:none}
+.theme-btn{background:var(--surface);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:10px;cursor:pointer;display:grid;place-items:center}
+@media (max-width:760px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:6px 12px;border-radius:999px}
+.dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2)}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.08;letter-spacing:-.035em;margin:18px 0 14px;font-weight:800}
+h1 .grad{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.1rem;color:var(--muted);max-width:56ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--border);background:var(--surface);color:var(--text)}
+.btn:hover{text-decoration:none;border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(1.08)}
+.socials{display:flex;gap:10px;margin-top:22px}
+.socials a{width:40px;height:40px;border-radius:10px;border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;color:var(--muted)}
+.socials a:hover{color:var(--accent);border-color:var(--accent)}
+.socials svg{width:18px;height:18px}
+.photo-card{position:relative;justify-self:center}
+.photo-card img{width:min(300px,70vw);height:auto;aspect-ratio:1/1.05;object-fit:cover;border-radius:24px;border:1px solid var(--border);box-shadow:var(--shadow);display:block;background:var(--surface)}
+.photo-card::before{content:"";position:absolute;inset:-14px;border-radius:30px;background:linear-gradient(135deg,var(--accent),var(--accent-2));opacity:.18;z-index:-1;filter:blur(18px)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px;max-width:520px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-size:1.5rem;letter-spacing:-.02em}
+.stat span{font-size:.8rem;color:var(--muted)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.photo-card{order:-1;justify-self:start}.photo-card img{width:160px}.hero{padding-top:40px}}
+
+/* sections */
+section{padding:64px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:28px}
+.sec-head .num{color:var(--accent);font-size:.9rem}
+h2{font-size:1.8rem;letter-spacing:-.025em;font-weight:800}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.muted{color:var(--muted)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
+.about-grid p{color:var(--muted);font-size:1.03rem}
+.about-grid p strong{color:var(--text)}
+.facts{list-style:none;display:grid;gap:10px;font-size:.95rem}
+.facts li{display:flex;gap:10px;align-items:flex-start}
+.facts .k{color:var(--muted);min-width:84px}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr}}
+
+/* timeline */
+.timeline{position:relative;display:grid;gap:18px}
+.job{display:grid;grid-template-columns:180px 1fr;gap:24px}
+.job .when{color:var(--muted);font-size:.88rem;padding-top:24px}
+.job h3{font-size:1.15rem;letter-spacing:-.01em}
+.job .role{color:var(--accent);font-weight:600;font-size:.95rem;margin-bottom:10px}
+.job ul{padding-left:18px;color:var(--muted);display:grid;gap:6px}
+.job ul strong{color:var(--text);font-weight:600}
+.badge{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:3px 8px;border-radius:6px;margin-left:8px;vertical-align:middle}
+@media (max-width:760px){.job{grid-template-columns:1fr;gap:4px}.job .when{padding-top:0}}
+
+/* projects */
+.featured{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;margin-bottom:20px;border-color:color-mix(in srgb,var(--accent) 35%,var(--border))}
+.featured h3{font-size:1.35rem;letter-spacing:-.02em;margin:6px 0 8px}
+.featured ul{padding-left:18px;color:var(--muted);display:grid;gap:8px;font-size:.95rem}
+.featured ul strong{color:var(--text)}
+.flow{display:grid;gap:8px;align-content:start}
+.flow .step{display:flex;align-items:center;gap:10px;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:10px 12px;font-size:.88rem}
+.flow .step i{font-style:normal;width:24px;height:24px;border-radius:7px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:.78rem;flex:none}
+.flow .arrow{text-align:center;color:var(--muted);font-size:.8rem;line-height:1}
+.flow .label{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:2px}
+@media (max-width:860px){.featured{grid-template-columns:1fr}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.proj{display:flex;flex-direction:column;gap:10px;transition:transform .15s,border-color .15s}
+.proj:hover{transform:translateY(-3px);border-color:var(--accent)}
+.proj .type{font-size:.78rem;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.proj h3{font-size:1.1rem;letter-spacing:-.01em}
+.proj p{color:var(--muted);font-size:.93rem;flex:1}
+.proj .links{display:flex;flex-wrap:wrap;gap:14px;font-size:.88rem;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:.76rem;padding:4px 9px;border-radius:7px;background:var(--surface-2);border:1px solid var(--border);color:var(--muted);font-family:"JetBrains Mono",monospace}
+.other{margin-top:20px}
+.other ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px 28px}
+.other li{font-size:.94rem;color:var(--muted)}
+.other li b{color:var(--text);font-weight:600}
+.types{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+.skills h3{font-size:.95rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.skills h3::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--accent)}
+
+/* education */
+.edu{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.edu .yr{font-size:.85rem;color:var(--accent);font-weight:600}
+.edu h3{font-size:1.05rem;margin:4px 0}
+.edu p{color:var(--muted);font-size:.92rem}
+
+/* contact */
+.contact{text-align:center;padding:48px 24px}
+.contact h2{font-size:clamp(1.6rem,4vw,2.3rem)}
+.contact p{color:var(--muted);max-width:52ch;margin:12px auto 24px}
+.contact .cta{justify-content:center}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.85rem;text-align:center}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" class="brand">alamin<span>.dev</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle colour theme" title="Toggle theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Senior Software Engineer · Dhaka, Bangladesh</span>
+        <h1>Hi, I'm Al Amin.<br>I build <span class="grad">scalable backends</span> &amp; AI-driven products.</h1>
+        <p class="lead">Full-stack engineer with 7+ years of experience in Node.js (NestJS), PHP (Laravel) and Next.js — shipping AI-based CRM and fintech systems, microservices, and cloud infrastructure on AWS &amp; DigitalOcean.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:jomaddaralamin69@gmail.com">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Get in touch
+          </a>
+          <a class="btn" href="#projects">View projects →</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/jmalamin40" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></a>
+          <a href="https://www.linkedin.com/in/md-al-amin-hossen-8984081b9/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="https://medium.com/@jomaddaralamin69" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a>
+          <a href="mailto:jomaddaralamin69@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>7+</b><span>Years experience</span></div>
+          <div class="stat"><b>3</b><span>Companies</span></div>
+          <div class="stat"><b>20+</b><span>Project types shipped</span></div>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="assets/profile.png" alt="Portrait of Al Amin Hossain" width="300" height="315">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="num mono">01.</span><h2>About me</h2></div>
+      <div class="about-grid">
+        <div class="card reveal">
+          <p>I'm a <strong>Full-Stack Software Engineer</strong> with <strong>7+ years</strong> of experience specializing in <strong>Node.js (NestJS)</strong>, <strong>PHP (Laravel)</strong> and <strong>Next.js</strong>.</p>
+          <p style="margin-top:12px">I've built <strong>scalable microservices</strong>, <strong>AI-based CRM and fintech systems</strong> and dozens of third-party integrations, deployed applications on <strong>AWS / DigitalOcean</strong>, and automated delivery with <strong>Docker &amp; CI/CD pipelines</strong>.</p>
+          <p style="margin-top:12px">I care about efficient, high-performance systems built with clean code and modern DevOps practices.</p>
+        </div>
+        <div class="card reveal">
+          <ul class="facts">
+            <li><span class="k">Role</span><span>Senior Software Engineer</span></li>
+            <li><span class="k">Company</span><span>Silicon Orchard Limited</span></li>
+            <li><span class="k">Location</span><span>Dhaka, Bangladesh</span></li>
+            <li><span class="k">Focus</span><span>Backend, AI/automation, cloud &amp; DevOps</span></li>
+            <li><span class="k">Email</span><span><a href="mailto:jomaddaralamin69@gmail.com">jomaddaralamin69@gmail.com</a></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="num mono">02.</span><h2>Experience</h2></div>
+      <div class="timeline">
+        <div class="job reveal">
+          <div class="when mono">2021 — Present</div>
+          <div class="card">
+            <h3>Silicon Orchard Limited <span class="badge">Current</span></h3>
+            <div class="role">Senior Software Engineer</div>
+            <ul>
+              <li><strong>AI-based CRM / Fintech:</strong> building UW True Advance, an AI-driven underwriting CRM for Merchant Cash Advance (MCA) funding, with third-party connectors (GoHighLevel, MCA Tracker, DocuSeal) and automated decision logic.</li>
+              <li><strong>Full-stack development:</strong> designed and built high-traffic web apps — a social media platform with real-time features, an image-selling marketplace with secure payments, e-commerce with inventory dashboards, and an OTT video-on-demand platform.</li>
+              <li><strong>DevOps &amp; deployment:</strong> deployed scalable Node.js/PHP APIs on AWS (EC2, S3) and automated CI/CD pipelines for zero-downtime releases.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job reveal">
+          <div class="when mono">2019 — 2021</div>
+          <div class="card">
+            <h3>Doodle Inc</h3>
+            <div class="role">Software Engineer</div>
+            <ul>
+              <li>Developed and maintained a <strong>social media application</strong> with user profiles, real-time messaging and content sharing.</li>
+              <li>Built a custom <strong>digital marketing platform</strong> with an analytics dashboard and campaign management tools.</li>
+              <li>Delivered clean, maintainable code across multiple projects on tight deadlines.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="job reveal">
+          <div class="when mono">2017 — 2019</div>
+          <div class="card">
+            <h3>Zaman-IT</h3>
+            <div class="role">Software Engineer</div>
+            <ul>
+              <li>Built enterprise solutions: <strong>logistics management</strong> (route optimization &amp; tracking), <strong>travel agency software</strong>, <strong>HR payroll</strong>, a <strong>matrimony app</strong>, <strong>multi-vendor e-commerce</strong> and a <strong>real-time inventory system</strong>.</li>
+              <li>Designed robust database architectures and optimized application performance.</li>
+              <li>Worked with cross-functional teams to turn business requirements into scalable solutions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="num mono">03.</span><h2>Featured projects</h2></div>
+
+      <article class="card featured reveal">
+        <div>
+          <span class="badge" style="margin-left:0">Latest · Fintech / MCA</span>
+          <h3>UW True Advance — AI-Based Underwriting CRM</h3>
+          <p class="muted" style="margin-bottom:14px">An AI-powered CRM that automates the underwriting workflow for Merchant Cash Advance funding — from lead intake and application review to offer, e-signed contract and funding.</p>
+          <ul>
+            <li><strong>Connector layer:</strong> GoHighLevel for lead &amp; pipeline sync, MCA Tracker for deal/position tracking, DocuSeal for contracts &amp; e-signatures.</li>
+            <li><strong>Decision engine:</strong> rule-based + AI underwriting logic producing approve / decline / offer recommendations.</li>
+            <li><strong>Automated documents:</strong> contracts generated from deal data, signing status tracked via webhooks and synced back.</li>
+            <li><strong>Event-driven sync:</strong> real-time, webhook-based updates between the CRM and external platforms.</li>
+          </ul>
+          <div class="tags" style="margin-top:16px">
+            <span class="tag">Node.js</span><span class="tag">NestJS</span><span class="tag">TypeScript</span><span class="tag">REST</span><span class="tag">Webhooks</span><span class="tag">AI/LLM</span><span class="tag">GoHighLevel API</span><span class="tag">DocuSeal API</span>
+          </div>
+        </div>
+        <div class="flow" aria-label="Underwriting pipeline">
+          <div class="label">Underwriting pipeline</div>
+          <div class="step"><i>1</i>Lead intake <span class="muted">· GoHighLevel</span></div>
+          <div class="arrow">↓</div>
+          <div class="step"><i>2</i>Application review</div>
+          <div class="arrow">↓</div>
+          <div class="step"><i>3</i>AI + rules decision engine</div>
+          <div class="arrow">↓</div>
+          <div class="step"><i>4</i>Offer &amp; e-signed contract <span class="muted">· DocuSeal</span></div>
+          <div class="arrow">↓</div>
+          <div class="step"><i>5</i>Funding &amp; tracking <span class="muted">· MCA Tracker</span></div>
+        </div>
+      </article>
+
+      <div class="grid">
+        <article class="card proj reveal">
+          <span class="type">Own product · Logistics</span>
+          <h3>Cargo Directory World</h3>
+          <p>Global directory of freight forwarders and shipping companies — <strong style="color:var(--text)">33,000+ companies across 212 countries</strong> — with search, company profiles, free listings with a dashboard, and freight tools (CBM &amp; chargeable-weight calculators, container guide, Incoterms 2020).</p>
+          <div class="tags"><span class="tag">Next.js</span><span class="tag">SEO</span><span class="tag">Cloudflare</span><span class="tag">AdSense</span></div>
+          <div class="links"><a href="https://www.cargodirectoryworld.com/" target="_blank" rel="noopener">cargodirectoryworld.com ↗</a></div>
+        </article>
+        <article class="card proj reveal">
+          <span class="type">Events</span>
+          <h3>DateYork</h3>
+          <p>Event platform to discover and join concerts, meetups and workshops, integrated with social media, ticketing and calendars — Eventbrite, Google Calendar, PayPal and Stripe.</p>
+          <div class="tags"><span class="tag">Payments</span><span class="tag">Integrations</span></div>
+          <div class="links"><a href="https://dateyork.de/" target="_blank" rel="noopener">dateyork.de ↗</a></div>
+        </article>
+        <article class="card proj reveal">
+          <span class="type">OTT · Mobile</span>
+          <h3>StreemBeem</h3>
+          <p>Movies, TV shows and music in one app — discover, track and save content across multiple streaming services.</p>
+          <div class="tags"><span class="tag">React Native</span><span class="tag">Streaming</span></div>
+          <div class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.streembeem" target="_blank" rel="noopener">Google Play ↗</a>
+            <a href="https://apps.apple.com/us/app/streembeem/id6723897263" target="_blank" rel="noopener">App Store ↗</a>
+          </div>
+        </article>
+        <article class="card proj reveal">
+          <span class="type">Social</span>
+          <h3>SoMee Social</h3>
+          <p>Next-generation social platform focused on real connections, meaningful content and rewarding engagement.</p>
+          <div class="tags"><span class="tag">Real-time</span><span class="tag">Socket.io</span></div>
+          <div class="links"><a href="https://somee.social/" target="_blank" rel="noopener">somee.social ↗</a></div>
+        </article>
+      </div>
+
+      <div class="card other reveal">
+        <h3 style="font-size:1rem;margin-bottom:14px">Other projects</h3>
+        <ul>
+          <li><b>Beauti4Me</b> — beauty-products e-commerce · <a href="https://www.beauti4me.com/" target="_blank" rel="noopener">beauti4me.com ↗</a></li>
+          <li><b>A4Z.in</b> — URL-shortener web app · <a href="https://a4z.in/" target="_blank" rel="noopener">a4z.in ↗</a></li>
+          <li><b>Multi-vendor E-commerce</b> — Node.js API, React Native apps and Next.js web</li>
+          <li><b>HR Payroll &amp; Logistics</b> — payroll, employee records, fleet tracking (Laravel + mobile)</li>
+        </ul>
+        <div class="types">
+          <span class="tag">AI-based CRM</span><span class="tag">Fintech</span><span class="tag">Social media</span><span class="tag">OTT</span><span class="tag">E-commerce</span><span class="tag">Multi-vendor</span><span class="tag">Food ordering</span><span class="tag">POS</span><span class="tag">Inventory</span><span class="tag">HR payroll</span><span class="tag">Doctor appointment</span><span class="tag">Video calling</span><span class="tag">Blockchain (Hive Engine)</span><span class="tag">URL shortener</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="num mono">04.</span><h2>Skills</h2></div>
+      <div class="skills">
+        <div class="card reveal"><h3>Backend</h3><div class="tags"><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">NestJS</span><span class="tag">TypeScript</span><span class="tag">GraphQL</span><span class="tag">Socket.io</span><span class="tag">Laravel</span><span class="tag">CodeIgniter</span></div></div>
+        <div class="card reveal"><h3>Frontend &amp; Mobile</h3><div class="tags"><span class="tag">React.js</span><span class="tag">Next.js</span><span class="tag">Redux</span><span class="tag">React Native</span></div></div>
+        <div class="card reveal"><h3>AI &amp; Automation</h3><div class="tags"><span class="tag">LLM integration</span><span class="tag">AI-based CRM</span><span class="tag">n8n</span><span class="tag">Decision / rule engines</span><span class="tag">Webhooks</span><span class="tag">API connectors</span></div></div>
+        <div class="card reveal"><h3>AWS</h3><div class="tags"><span class="tag">EC2</span><span class="tag">Lambda</span><span class="tag">API Gateway</span><span class="tag">Cognito</span><span class="tag">AppSync</span><span class="tag">S3</span><span class="tag">OpenSearch</span><span class="tag">DynamoDB</span><span class="tag">DocumentDB</span><span class="tag">Route 53</span><span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">Secrets Manager</span><span class="tag">CloudWatch</span><span class="tag">Serverless</span></div></div>
+        <div class="card reveal"><h3>Cloud &amp; DevOps</h3><div class="tags"><span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">DigitalOcean</span><span class="tag">Linux</span><span class="tag">Nginx</span><span class="tag">Apache</span><span class="tag">PM2</span><span class="tag">Cloudflare</span><span class="tag">Bash</span><span class="tag">cPanel</span><span class="tag">DNS</span></div></div>
+        <div class="card reveal"><h3>Architecture &amp; Data</h3><div class="tags"><span class="tag">Microservices</span><span class="tag">RabbitMQ</span><span class="tag">Redis</span><span class="tag">Event-driven</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Elasticsearch</span></div></div>
+        <div class="card reveal"><h3>Node.js Ecosystem</h3><div class="tags"><span class="tag">JWT</span><span class="tag">OAuth 2.0</span><span class="tag">Sequelize</span><span class="tag">Joi</span><span class="tag">Cron jobs</span><span class="tag">Push notifications</span></div></div>
+        <div class="card reveal"><h3>Testing &amp; Quality</h3><div class="tags"><span class="tag">Jest</span><span class="tag">Mocha</span><span class="tag">Chai</span><span class="tag">ESLint</span><span class="tag">Prettier</span><span class="tag">Husky</span></div></div>
+        <div class="card reveal"><h3>Tools</h3><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">GitLab</span><span class="tag">Bitbucket</span><span class="tag">Jira</span><span class="tag">ClickUp</span><span class="tag">Trello</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="num mono">05.</span><h2>Education</h2></div>
+      <div class="edu">
+        <div class="card reveal"><div class="yr mono">2015 — 2019</div><h3>BSc</h3><p>Kobi Nazrul Govt. College, Dhaka</p></div>
+        <div class="card reveal"><div class="yr mono">2014</div><h3>HSC</h3><p>Abdur Rashid Khan Degree College, Patuakhali</p></div>
+        <div class="card reveal"><div class="yr mono">2012</div><h3>SSC</h3><p>Nowmala High School, Patuakhali</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="card contact reveal">
+        <span class="num mono" style="color:var(--accent)">06. What's next?</span>
+        <h2 style="margin-top:8px">Let's build something together</h2>
+        <p>Open to senior backend / full-stack roles and freelance work on AI automation, fintech, and scalable cloud systems. My inbox is always open.</p>
+        <div class="cta">
+          <a class="btn primary" href="mailto:jomaddaralamin69@gmail.com">Say hello</a>
+          <a class="btn" href="https://www.linkedin.com/in/md-al-amin-hossen-8984081b9/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn" href="https://github.com/jmalamin40" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Al Amin Hossain · Built with plain HTML &amp; CSS · Hosted on GitHub Pages</div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.08});
+    els.forEach(function(el){io.observe(el)});
+  } else els.forEach(function(el){el.classList.add('in')});
+})();
+</script>
+</body>
+</html>
